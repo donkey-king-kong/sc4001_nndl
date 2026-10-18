@@ -1,5 +1,6 @@
 # macOS
 .DS_Store
+**/.DS_Store
 
 # Large data files (>100MB)
 phase_1/track_1/data/dataset_coco.json
