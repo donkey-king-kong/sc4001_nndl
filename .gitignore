@@ -15,3 +15,10 @@ phase_1/track_1/models/clipcap_transformer_coco_pretrained.pt
 
 # Images folder
 phase_1/track_1/images/
+
+# sdd stuff for jr stuff
+.github/*
+.specify/*
+
+# python running files
+**__pycache__
