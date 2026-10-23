@@ -1,0 +1,1 @@
+{"config": {"mapping": "transformer", "prefix_length": 40}, "epochs": 10, "seeds": [0, 1, 2], "train_settings": {"mapping": "transformer", "prefix_length": 40, "clip_length": null, "num_layers": 8, "epochs": 10, "train_steps": null, "batch_size": 40, "lr": 2e-05, "warmup_steps": 5000, "seed": 0, "amp": true, "ckpt_minutes": 10, "log_every": 500}}

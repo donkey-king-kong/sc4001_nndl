@@ -16,14 +16,18 @@ module load anaconda
 if conda env list | grep -q '^track2 '; then
     echo "conda env track2 already exists"
 else
-    cp /tc1apps/3_conda_yml/SC4001.yml ~/SC4001.yml
-    conda env create -f ~/SC4001.yml -n track2 || conda create -y -n track2 --clone /tc1apps/2_conda_env/CZ4042_v6
+    # the course environment (the TC1 guide calls it SC4001.yml; on the cluster it is CZ4042_v6)
+    conda create -y -n track2 --clone /tc1apps/2_conda_env/CZ4042_v6 \
+        || conda env create -f /tc1apps/3_conda_yml/CZ4042_v6.yml -n track2
 fi
 source activate track2
 
 # 2. extra packages: Java for METEOR / the PTB tokenizer, and the Python libraries we use
-conda install -y -c conda-forge openjdk=17
-pip install "transformers==4.56.1" pycocoevalcap inflect nltk tqdm huggingface_hub
+#    (TC1 already has Java 11 in /usr/bin; only install one if it is missing)
+if ! command -v java >/dev/null; then
+    CONDA_NO_PLUGINS=true conda install -y -c conda-forge openjdk=17
+fi
+pip install "transformers==4.56.1" pycocoevalcap inflect nltk tqdm huggingface_hub gdown
 
 # 3. ClipCap's model code, with its AdamW import fixed for new transformers versions
 if [ ! -d CLIP_prefix_caption ]; then

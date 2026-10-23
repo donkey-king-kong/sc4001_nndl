@@ -126,6 +126,18 @@ def check_environment():
     tokenizer = GPT2TokenizerFast.from_pretrained('gpt2')
     model = build_model(BEST_SPEC['mapping'], BEST_SPEC['prefix_length']).to('cuda')
     print('GPT-2 loaded offline: ok,', sum(p.numel() for p in model.clip_project.parameters()) // 10**6, 'M mapping params')
+
+    # one real fp16 training step on the GPU (catches PyTorch builds that do not support this GPU)
+    from track_2 import caption_loss
+    tokens = torch.tensor([tokenizer.encode('A dog runs on the grass.')] * 4, device='cuda')
+    feats = torch.randn(4, 640, device='cuda')
+    scaler = torch.amp.GradScaler('cuda')
+    with torch.autocast('cuda', dtype=torch.float16):
+        loss = caption_loss(model, tokens, tokens, feats)
+    scaler.scale(loss).backward()
+    torch.cuda.synchronize()
+    assert torch.isfinite(loss), loss
+    print(f'GPU training step: ok (loss {float(loss):.3f})')
     del model, tokenizer
 
     # Track 1's self-test: human captions score > 0 and never hallucinate
@@ -145,7 +157,6 @@ def check_environment():
 
 def write_summary():
     import track1_eval as t1
-    import numpy as np
 
     seed_results = []
     timing = []
@@ -154,8 +165,8 @@ def write_summary():
         p = seed_paths(seed)
         seed_results.append(read_json(p['eval']))
         run_log = read_json(os.path.join(p['run_dir'], 'run_log.json'))
-        timing.append({'seed': seed, 'gpu': run_log['gpu'], 'train_hours': run_log['train_seconds'] / 3600,
-                       'median_sec_per_step': float(np.median([e['session_sec_per_step'] for e in run_log['epochs']])),
+        timing.append({'seed': seed, 'gpus': run_log.get('gpus', [run_log['gpu']]),
+                       'train_hours': run_log['train_seconds'] / 3600,
                        'val_loss_per_epoch': [e['val_loss'] for e in run_log['epochs']]})
         for e in run_log['epochs']:
             curve_lines.append(f"{seed},{e['epoch']},{e['train_loss']:.5f},{e['val_loss']:.5f}")
@@ -178,7 +189,7 @@ def write_summary():
         print(f"{m:<12}{agg[m]['mean'] * scale:>10.2f}{agg[m]['std'] * scale:>10.2f}{ref_text}")
     print()
     for t in timing:
-        print(f"seed {t['seed']}: {t['train_hours']:.2f} h training in total, last GPU {t['gpu']}")
+        print(f"seed {t['seed']}: {t['train_hours']:.2f} h training in total, GPUs used: {', '.join(t['gpus'])}")
 
     write_json({'config': BEST_SPEC, 'epochs': args.epochs, 'seeds': ALL_SEEDS, 'aggregate': agg,
                 'per_seed': [r['scores'] for r in seed_results], 'timing': timing,
@@ -190,6 +201,22 @@ def write_summary():
     print('saved baseline_summary.json, baseline_plan.json and baseline_loss_curves.csv in', RESULTS_DIR)
     if 'CIDEr' in agg and agg['CIDEr']['mean'] < 0.9:
         print('WARNING: CIDEr well below the pretrained reference - check for a bug')
+
+
+def score(caption_path, attempts=3):
+    # Track 1's evaluate(); its Java tokenizer step can fail at random on the cluster
+    # (pycocoevalcap then raises a bare AssertionError). Retry, and never let scoring
+    # stop training: the captions are saved and can be scored later.
+    import track1_eval as t1
+    for attempt in range(1, attempts + 1):
+        try:
+            t1.evaluate(caption_path, 'val', spice=False)
+            return True
+        except AssertionError as e:
+            print(f'scoring failed (attempt {attempt} of {attempts}): {e!r}')
+            time.sleep(30)
+    print('WARNING: could not score', os.path.basename(caption_path), '- captions are saved, score it later')
+    return False
 
 
 def main():
@@ -244,8 +271,7 @@ def main():
             torch.cuda.empty_cache()
 
         if not args.skip_eval:
-            import track1_eval as t1
-            t1.evaluate(p['captions'], 'val', spice=False)
+            score(p['captions'])
         print(f'seed {seed}: done')
 
     if args.skip_eval:

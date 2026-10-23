@@ -431,6 +431,11 @@ def train_run(cfg, train_set, val_set, run_dir, device, max_steps=None, deadline
         start_epoch = state['epoch']
         start_step = state['step']
         run_log = state['run_log']
+        # record every GPU type the run used ('gpu' keeps the first one)
+        gpu_now = torch.cuda.get_device_name(0) if device == 'cuda' else 'cpu'
+        run_log.setdefault('gpus', [run_log['gpu']])
+        if run_log['gpus'][-1] != gpu_now:
+            run_log['gpus'].append(gpu_now)
         log(f'resuming {run_dir} at epoch {start_epoch} step {start_step}')
 
     def save_state(epoch, step):
