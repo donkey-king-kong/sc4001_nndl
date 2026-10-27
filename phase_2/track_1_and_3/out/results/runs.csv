@@ -1,0 +1,16 @@
+run,worker,lambda,swap,loss_type,margin,seed,status,train_hours,gpus,final_val_loss,BLEU-4,METEOR,CIDEr,CHAIRi,CHAIRs,avg_len,obj_recall,val_gap_structured,val_pair_acc_structured,train_ranking_loss_first_last
+objswap_structured_lam0_m0.2_transformer_p40_seed0,0,0.0,structured,margin,0.2,0,scored,3.49,Tesla V100-PCIE-32GB,2.3165,31.06,26.55,104.47,7.49,11.0,9.78,54.99,1.1987,0.9894,
+objswap_structured_lam0_m0.2_transformer_p40_seed1,1,0.0,structured,margin,0.2,1,scored,3.49,Tesla V100-PCIE-32GB,2.317,31.0,26.52,104.27,7.95,11.9,9.81,55.28,1.1897,0.9889,
+objswap_structured_lam0_m0.2_transformer_p40_seed2,2,0.0,structured,margin,0.2,2,not started,,,,,,,,,,,,,
+objswap_structured_lam0.1_m0.2_transformer_p40_seed0,0,0.1,structured,margin,0.2,0,in progress,,,,,,,,,,,,,0.098 -> 0.005
+objswap_structured_lam0.1_m0.2_transformer_p40_seed1,1,0.1,structured,margin,0.2,1,scored,5.34,Tesla V100-PCIE-32GB,2.3155,30.54,26.35,103.47,7.72,11.68,9.85,54.92,1.1904,0.9904,0.103 -> 0.002
+objswap_structured_lam0.1_m0.2_transformer_p40_seed2,2,0.1,structured,margin,0.2,2,not started,,,,,,,,,,,,,
+objswap_structured_lam0.3_m0.2_transformer_p40_seed0,0,0.3,structured,margin,0.2,0,not started,,,,,,,,,,,,,
+objswap_structured_lam0.3_m0.2_transformer_p40_seed1,1,0.3,structured,margin,0.2,1,in progress,,,,,,,,,,,,,0.102 -> 0.005
+objswap_structured_lam0.3_m0.2_transformer_p40_seed2,2,0.3,structured,margin,0.2,2,not started,,,,,,,,,,,,,
+objswap_structured_lam1_m0.2_transformer_p40_seed0,0,1.0,structured,margin,0.2,0,not started,,,,,,,,,,,,,
+objswap_structured_lam1_m0.2_transformer_p40_seed1,1,1.0,structured,margin,0.2,1,not started,,,,,,,,,,,,,
+objswap_structured_lam1_m0.2_transformer_p40_seed2,2,1.0,structured,margin,0.2,2,not started,,,,,,,,,,,,,
+objswap_structured_lam3_m0.2_transformer_p40_seed0,0,3.0,structured,margin,0.2,0,not started,,,,,,,,,,,,,
+objswap_structured_lam3_m0.2_transformer_p40_seed1,1,3.0,structured,margin,0.2,1,not started,,,,,,,,,,,,,
+objswap_structured_lam3_m0.2_transformer_p40_seed2,2,3.0,structured,margin,0.2,2,not started,,,,,,,,,,,,,

@@ -1,0 +1,1 @@
+{"loss": 2.265589475631714, "nll": 2.262606143951416, "ranking_loss": 0.0029833675362169743, "positive_nll": 2.2051053047180176, "negative_nll": 3.319983720779419, "pair_accuracy": 1.0, "n_negatives": 40.0, "caption_loss": 2.262606620788574, "mapping_grad_max": 0.05296493321657181, "none_negative_loss": 2.262606143951416}

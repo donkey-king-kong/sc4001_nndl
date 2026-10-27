@@ -1,0 +1,27 @@
+[project]
+name = "sc4001-nndl"
+version = "0.1.0"
+description = "SC4001 neural network and deep learning experiments"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "huggingface-hub>=0.34,<1",
+    "inflect>=7.5,<8",
+    "nltk>=3.9,<4",
+    "numpy>=1.26,<3",
+    "pycocoevalcap>=1.2",
+    "protobuf>=5,<7",
+    "torch==2.5.1",
+    "tqdm>=4.67,<5",
+    "transformers==4.56.1",
+]
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
