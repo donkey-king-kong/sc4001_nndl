@@ -1,0 +1,46 @@
+=== stage prepare (340 min left in this job) ===
+stage: prepare | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+train structured: 89.9% of captions have a negative
+train random: 89.9% of captions have a negative
+val structured: 89.8% of captions have a negative
+val random: 89.8% of captions have a negative
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+structured swaps:
+  [OK] "A large passenger jet sitting on top of a rural runway."
+       -> "A large handbag sitting on top of a rural runway."
+       airplane -> handbag
+  [OK] "A cruise ship docked for letting passengers off to port"
+       -> "A cruise dog docked for letting passengers off to port"
+       boat -> dog
+  [OK] "Two zebras are sharing grass from a pile."
+       -> "Two horses are sharing grass from a pile."
+       zebra -> horse
+  [OK] "A black and white cat inside a brick building looking out."
+       -> "A black and white laptop inside a brick building looking out."
+       cat -> laptop
+  [OK] "a girl in a pink top is training a horse"
+       -> "a cup in a pink top is training a horse"
+       person -> cup
+  errors: {'ungrammatical': 2, 'target_not_absent_from_image': 0, 'target_not_detected_by_chair': 0, 'plural_not_preserved': 0}  checked: 100
+random swaps:
+  [OK] "A large passenger jet sitting on top of a rural runway."
+       -> "A large sink sitting on top of a rural runway."
+       airplane -> sink
+  [OK] "A cruise ship docked for letting passengers off to port"
+       -> "A cruise ship docked for letting horses off to port"
+       person -> horse
+  [OK] "Two zebras are sharing grass from a pile."
+       -> "Two pizzas are sharing grass from a pile."
+       zebra -> pizza
+  [OK] "A black and white cat inside a brick building looking out."
+       -> "A black and white boat inside a brick building looking out."
+       cat -> boat
+  [OK] "a girl in a pink top is training a horse"
+       -> "a donut in a pink top is training a horse"
+       person -> donut
+  errors: {'ungrammatical': 2, 'target_not_absent_from_image': 0, 'target_not_detected_by_chair': 0, 'plural_not_preserved': 5}  checked: 100
+saved review sheet: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results/manual_review_negatives.csv
+Done: prepare. Results are in /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results (run sheet: runs.csv)

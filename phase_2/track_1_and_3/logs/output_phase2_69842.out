@@ -1,0 +1,28 @@
+=== stage check (340 min left in this job) ===
+stage: check | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+python 3.12.13 | torch 2.5.1+cu124 | transformers 4.56.1
+device: cuda | Tesla V100-PCIE-32GB
+java: Picked up JAVA_TOOL_OPTIONS: -Xlog:disable
+data files: ok
+  [0] pos: "A woman stands in the dining area at the table."
+       neg: "A cell phone stands in the dining area at the table."
+  [1] pos: "A room with chairs, a table, and a woman in it."
+       neg: "A room with chairs, a spoon, and a woman in it."
+  [2] pos: "A woman standing in a kitchen by a window"
+       neg: "A truck standing in a kitchen by a window"
+  nll=2.2626  caption_loss=2.2626
+  positive_nll=2.205  negative_nll=3.320
+  ranking_loss=0.003  total_loss=2.266
+loss smoke test: ok
+unlikelihood loss: ok (ranking_loss 0.196)
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+  tokenising...
+  BLEU...
+  METEOR...
+  CIDEr...
+evaluation (Java, METEOR, CIDEr, CHAIR): ok
+ALL CHECKS PASSED
+Done: check. Results are in /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results (run sheet: runs.csv)
