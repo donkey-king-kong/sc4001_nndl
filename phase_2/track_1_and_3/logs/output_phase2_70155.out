@@ -1,0 +1,16 @@
+=== stage sweep (340 min left in this job) ===
+stage: sweep | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+sweep: 15 runs, worker 2 of 3 takes 5
+   objswap_structured_lam0_m0.2_transformer_p40_seed2
+   objswap_structured_lam0.1_m0.2_transformer_p40_seed2
+   objswap_structured_lam0.3_m0.2_transformer_p40_seed2
+   objswap_structured_lam1_m0.2_transformer_p40_seed2
+   objswap_structured_lam3_m0.2_transformer_p40_seed2
+max caption tokens: 40  train captions: 566747  val captions: 25010
+train structured: 89.9% of captions have a negative
+objswap_structured_lam0_m0.2_transformer_p40_seed2: already done
+objswap_structured_lam0.1_m0.2_transformer_p40_seed2: training (339 min left in this job)
+resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap_structured_lam0.1_m0.2_transformer_p40_seed2 at epoch 2 step 13285
+epoch 2: epoch=2, train_loss=2.2665, session_seconds=121.0545, session_steps=883, session_sec_per_step=0.1371, val_loss=2.3146
+epoch 3: epoch=3, train_loss=2.2248, session_seconds=1944.5545, session_steps=14168, session_sec_per_step=0.1372, val_loss=2.2918
+epoch 4: epoch=4, train_loss=2.1714, session_seconds=1939.5713, session_steps=14168, session_sec_per_step=0.1369, val_loss=2.2818
