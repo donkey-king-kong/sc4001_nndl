@@ -14,3 +14,43 @@ resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap
 epoch 2: epoch=2, train_loss=2.2665, session_seconds=121.0545, session_steps=883, session_sec_per_step=0.1371, val_loss=2.3146
 epoch 3: epoch=3, train_loss=2.2248, session_seconds=1944.5545, session_steps=14168, session_sec_per_step=0.1372, val_loss=2.2918
 epoch 4: epoch=4, train_loss=2.1714, session_seconds=1939.5713, session_steps=14168, session_sec_per_step=0.1369, val_loss=2.2818
+epoch 5: epoch=5, train_loss=2.1214, session_seconds=1951.9812, session_steps=14168, session_sec_per_step=0.1378, val_loss=2.2791
+epoch 6: epoch=6, train_loss=2.0739, session_seconds=1952.8491, session_steps=14168, session_sec_per_step=0.1378, val_loss=2.2800
+epoch 7: epoch=7, train_loss=2.0283, session_seconds=1947.7811, session_steps=14168, session_sec_per_step=0.1375, val_loss=2.2905
+epoch 8: epoch=8, train_loss=1.9865, session_seconds=1944.1674, session_steps=14168, session_sec_per_step=0.1372, val_loss=2.3038
+epoch 9: epoch=9, train_loss=1.9505, session_seconds=1946.2845, session_steps=14168, session_sec_per_step=0.1374, val_loss=2.3148
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+evaluating clipcap_objswap_structured_lam0.1_m0.2_transformer_p40_seed2_val on val
+  coverage ok: 5000 images
+  tokenising...
+  BLEU...
+  METEOR...
+  CIDEr...
+  CHAIR...
+  saved clipcap_objswap_structured_lam0.1_m0.2_transformer_p40_seed2_val.eval.json and clipcap_objswap_structured_lam0.1_m0.2_transformer_p40_seed2_val.per_image.json
+----------------------------------------
+file : clipcap_objswap_structured_lam0.1_m0.2_transformer_p40_seed2_val
+split: val  images: 5000
+----------------------------------------
+BLEU-4          0.3112
+METEOR          0.2643
+CIDEr           1.0392
+CHAIRi          0.0705
+CHAIRs          0.1044
+avg_len         9.8250
+obj_recall      0.5515
+----------------------------------------
+  val gap (neg - pos NLL): structured 1.208, random 1.382
+  train hours: 5.36
+objswap_structured_lam0.3_m0.2_transformer_p40_seed2: training (103 min left in this job)
+resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap_structured_lam0.3_m0.2_transformer_p40_seed2 at epoch 1 step 8803
+epoch 1: epoch=1, train_loss=2.3429, session_seconds=737.0235, session_steps=5365, session_sec_per_step=0.1374, val_loss=2.3575
+epoch 2: epoch=2, train_loss=2.2883, session_seconds=1943.8329, session_steps=14168, session_sec_per_step=0.1372, val_loss=2.3126
+epoch 3: epoch=3, train_loss=2.2271, session_seconds=1944.9155, session_steps=14168, session_sec_per_step=0.1373, val_loss=2.2897
+time limit reached: saved checkpoint at epoch 4 step 1
+objswap_structured_lam0.3_m0.2_transformer_p40_seed2: stopped at the time limit, checkpoint saved - submit the job again
+Time limit reached, checkpoint saved. Submitting the next job...
+Could not resubmit automatically. Run: sbatch /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/job_phase2_updated.sh sweep --worker 2 --n-workers 3
