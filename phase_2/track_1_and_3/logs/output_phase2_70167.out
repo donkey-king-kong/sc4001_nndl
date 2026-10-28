@@ -1,0 +1,54 @@
+=== stage sweep (340 min left in this job) ===
+stage: sweep | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+sweep: 15 runs, worker 2 of 3 takes 5
+   objswap_structured_lam0_m0.2_transformer_p40_seed2
+   objswap_structured_lam0.1_m0.2_transformer_p40_seed2
+   objswap_structured_lam0.3_m0.2_transformer_p40_seed2
+   objswap_structured_lam1_m0.2_transformer_p40_seed2
+   objswap_structured_lam3_m0.2_transformer_p40_seed2
+max caption tokens: 40  train captions: 566747  val captions: 25010
+train structured: 89.9% of captions have a negative
+objswap_structured_lam0_m0.2_transformer_p40_seed2: already done
+objswap_structured_lam0.1_m0.2_transformer_p40_seed2: already done
+objswap_structured_lam0.3_m0.2_transformer_p40_seed2: training (339 min left in this job)
+resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap_structured_lam0.3_m0.2_transformer_p40_seed2 at epoch 4 step 1
+epoch 4: epoch=4, train_loss=2.1735, session_seconds=1936.7488, session_steps=14167, session_sec_per_step=0.1367, val_loss=2.2811
+epoch 5: epoch=5, train_loss=2.1235, session_seconds=1932.0481, session_steps=14168, session_sec_per_step=0.1364, val_loss=2.2794
+epoch 6: epoch=6, train_loss=2.0757, session_seconds=1932.4255, session_steps=14168, session_sec_per_step=0.1364, val_loss=2.2825
+epoch 7: epoch=7, train_loss=2.0299, session_seconds=1932.6559, session_steps=14168, session_sec_per_step=0.1364, val_loss=2.2925
+epoch 8: epoch=8, train_loss=1.9880, session_seconds=1931.8442, session_steps=14168, session_sec_per_step=0.1364, val_loss=2.3022
+epoch 9: epoch=9, train_loss=1.9519, session_seconds=1933.1848, session_steps=14168, session_sec_per_step=0.1364, val_loss=2.3152
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+evaluating clipcap_objswap_structured_lam0.3_m0.2_transformer_p40_seed2_val on val
+  coverage ok: 5000 images
+  tokenising...
+  BLEU...
+  METEOR...
+  CIDEr...
+  CHAIR...
+  saved clipcap_objswap_structured_lam0.3_m0.2_transformer_p40_seed2_val.eval.json and clipcap_objswap_structured_lam0.3_m0.2_transformer_p40_seed2_val.per_image.json
+----------------------------------------
+file : clipcap_objswap_structured_lam0.3_m0.2_transformer_p40_seed2_val
+split: val  images: 5000
+----------------------------------------
+BLEU-4          0.3114
+METEOR          0.2652
+CIDEr           1.0419
+CHAIRi          0.0709
+CHAIRs          0.1070
+avg_len         9.8392
+obj_recall      0.5552
+----------------------------------------
+  val gap (neg - pos NLL): structured 1.212, random 1.386
+  train hours: 5.35
+objswap_structured_lam1_m0.2_transformer_p40_seed2: training (140 min left in this job)
+epoch 0: epoch=0, train_loss=2.6898, session_seconds=1930.7645, session_steps=14168, session_sec_per_step=0.1363, val_loss=2.4433
+epoch 1: epoch=1, train_loss=2.3784, session_seconds=1931.9743, session_steps=14168, session_sec_per_step=0.1364, val_loss=2.3598
+epoch 2: epoch=2, train_loss=2.2938, session_seconds=1930.3963, session_steps=14168, session_sec_per_step=0.1363, val_loss=2.3164
+time limit reached: saved checkpoint at epoch 3 step 7446
+objswap_structured_lam1_m0.2_transformer_p40_seed2: stopped at the time limit, checkpoint saved - submit the job again
+Time limit reached, checkpoint saved. Submitting the next job...
+Submitted batch job 70227

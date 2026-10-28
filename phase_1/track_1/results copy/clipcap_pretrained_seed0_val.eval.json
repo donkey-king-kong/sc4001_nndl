@@ -1,0 +1,1 @@
+{"caption_file": "clipcap_pretrained_seed0_val", "split": "val", "n_images": 5000, "spice": false, "scores": {"BLEU-4": 0.3143489600246337, "METEOR": 0.2621545336093341, "CIDEr": 1.0405841367242565, "CHAIRi": 0.07625776586673164, "CHAIRs": 0.1116, "avg_len": 9.5552, "obj_recall": 0.552465891596327, "n_mentions": 8209, "n_hallucinated": 626}}

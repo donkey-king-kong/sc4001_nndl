@@ -1,0 +1,15 @@
+=== stage sweep (340 min left in this job) ===
+stage: sweep | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+sweep: 15 runs, worker 1 of 3 takes 5
+   objswap_structured_lam0_m0.2_transformer_p40_seed1
+   objswap_structured_lam0.1_m0.2_transformer_p40_seed1
+   objswap_structured_lam0.3_m0.2_transformer_p40_seed1
+   objswap_structured_lam1_m0.2_transformer_p40_seed1
+   objswap_structured_lam3_m0.2_transformer_p40_seed1
+max caption tokens: 40  train captions: 566747  val captions: 25010
+train structured: 89.9% of captions have a negative
+objswap_structured_lam0_m0.2_transformer_p40_seed1: already done
+objswap_structured_lam0.1_m0.2_transformer_p40_seed1: already done
+objswap_structured_lam0.3_m0.2_transformer_p40_seed1: training (340 min left in this job)
+resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap_structured_lam0.3_m0.2_transformer_p40_seed1 at epoch 2 step 6187
+epoch 2: epoch=2, train_loss=2.2828, session_seconds=1099.8293, session_steps=7981, session_sec_per_step=0.1378, val_loss=2.3206
