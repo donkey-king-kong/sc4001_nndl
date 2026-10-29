@@ -1,0 +1,2 @@
+select did not choose a lambda (sweep not finished, or no lambda kept CIDEr above the floor).
+See the table above; pass --best-lambda or wait for the other workers, then resubmit.
