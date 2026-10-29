@@ -1,0 +1,52 @@
+=== stage sweep (340 min left in this job) ===
+stage: sweep | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+sweep: 15 runs, worker 1 of 3 takes 5
+   objswap_structured_lam0_m0.2_transformer_p40_seed1
+   objswap_structured_lam0.1_m0.2_transformer_p40_seed1
+   objswap_structured_lam0.3_m0.2_transformer_p40_seed1
+   objswap_structured_lam1_m0.2_transformer_p40_seed1
+   objswap_structured_lam3_m0.2_transformer_p40_seed1
+max caption tokens: 40  train captions: 566747  val captions: 25010
+train structured: 89.9% of captions have a negative
+objswap_structured_lam0_m0.2_transformer_p40_seed1: already done
+objswap_structured_lam0.1_m0.2_transformer_p40_seed1: already done
+objswap_structured_lam0.3_m0.2_transformer_p40_seed1: already done
+objswap_structured_lam1_m0.2_transformer_p40_seed1: already done
+objswap_structured_lam3_m0.2_transformer_p40_seed1: training (340 min left in this job)
+resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap_structured_lam3_m0.2_transformer_p40_seed1 at epoch 1 step 4710
+epoch 1: epoch=1, train_loss=2.3855, session_seconds=1298.3906, session_steps=9458, session_sec_per_step=0.1373, val_loss=2.3722
+epoch 2: epoch=2, train_loss=2.3109, session_seconds=1946.0565, session_steps=14168, session_sec_per_step=0.1374, val_loss=2.3286
+epoch 3: epoch=3, train_loss=2.2466, session_seconds=1945.7848, session_steps=14168, session_sec_per_step=0.1373, val_loss=2.3025
+epoch 4: epoch=4, train_loss=2.1923, session_seconds=1947.2747, session_steps=14168, session_sec_per_step=0.1374, val_loss=2.2856
+epoch 5: epoch=5, train_loss=2.1421, session_seconds=1949.6396, session_steps=14168, session_sec_per_step=0.1376, val_loss=2.2805
+epoch 6: epoch=6, train_loss=2.0945, session_seconds=1945.9240, session_steps=14168, session_sec_per_step=0.1373, val_loss=2.2835
+epoch 7: epoch=7, train_loss=2.0499, session_seconds=1947.3270, session_steps=14168, session_sec_per_step=0.1374, val_loss=2.2890
+epoch 8: epoch=8, train_loss=2.0089, session_seconds=1946.5427, session_steps=14168, session_sec_per_step=0.1374, val_loss=2.2994
+epoch 9: epoch=9, train_loss=1.9739, session_seconds=1947.1326, session_steps=14168, session_sec_per_step=0.1374, val_loss=2.3090
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+evaluating clipcap_objswap_structured_lam3_m0.2_transformer_p40_seed1_val on val
+  coverage ok: 5000 images
+  tokenising...
+  BLEU...
+  METEOR...
+  CIDEr...
+  CHAIR...
+  saved clipcap_objswap_structured_lam3_m0.2_transformer_p40_seed1_val.eval.json and clipcap_objswap_structured_lam3_m0.2_transformer_p40_seed1_val.per_image.json
+----------------------------------------
+file : clipcap_objswap_structured_lam3_m0.2_transformer_p40_seed1_val
+split: val  images: 5000
+----------------------------------------
+BLEU-4          0.3094
+METEOR          0.2662
+CIDEr           1.0455
+CHAIRi          0.0721
+CHAIRs          0.1086
+avg_len         9.8130
+obj_recall      0.5518
+----------------------------------------
+  val gap (neg - pos NLL): structured 1.224, random 1.381
+  train hours: 5.37
+Done: sweep. Results are in /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results (run sheet: runs.csv)
