@@ -1,0 +1,13 @@
+=== stage select (340 min left in this job) ===
+stage: select | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+lambda=0.1 swap=structured loss=margin: not all seeds scored yet
+lambda=0.3 swap=structured loss=margin: not all seeds scored yet
+lambda=1 swap=structured loss=margin: not all seeds scored yet
+lambda=3 swap=structured loss=margin: not all seeds scored yet
+baseline CIDEr 104.43, floor 102.43 (max drop 2)
+  lambda 0     CIDEr 104.28  CHAIRi  7.52  CHAIRs 11.16  (not eligible)
+sweep not finished, not selecting yet

@@ -1,0 +1,14 @@
+=== stage select (340 min left in this job) ===
+stage: select | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+baseline CIDEr 104.43, floor 102.43 (max drop 2)
+  lambda 0     CIDEr 104.28  CHAIRi  7.52  CHAIRs 11.16  (not eligible)
+  lambda 0.1   CIDEr 103.74  CHAIRi  7.46  CHAIRs 11.11
+  lambda 0.3   CIDEr 104.11  CHAIRi  7.32  CHAIRs 10.99
+  lambda 1     CIDEr 103.72  CHAIRi  7.25  CHAIRs 10.86
+  lambda 3     CIDEr 104.22  CHAIRi  7.21  CHAIRs 10.80
+best lambda: 3.0 -> results/best_lambda.json
+Done: select. Results are in /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results (run sheet: runs.csv)
