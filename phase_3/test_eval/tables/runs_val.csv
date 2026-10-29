@@ -1,0 +1,2 @@
+run,BLEU-4,METEOR,CIDEr,CHAIRi,CHAIRs,obj_recall,avg_len,minutes
+objswap_structured_lam0_m0.2_transformer_p40_seed0,31.06,26.55,104.47,7.49,11.0,54.99,9.78,7.3

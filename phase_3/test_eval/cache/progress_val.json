@@ -1,0 +1,16 @@
+{
+ "objswap_structured_lam0_m0.2_transformer_p40_seed0": {
+  "scores": {
+   "BLEU-4": 0.31061040408492513,
+   "METEOR": 0.2654866241815581,
+   "CIDEr": 1.0446764523521819,
+   "CHAIRi": 0.07486170866625691,
+   "CHAIRs": 0.11,
+   "avg_len": 9.7778,
+   "obj_recall": 0.549936044788098,
+   "n_mentions": 8135,
+   "n_hallucinated": 609
+  },
+  "minutes": 7.3
+ }
+}
