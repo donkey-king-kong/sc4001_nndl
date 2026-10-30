@@ -1,0 +1,52 @@
+=== stage ablation (340 min left in this job) ===
+stage: ablation | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+ablation: 3 runs, worker 0 of 1 takes 3
+   objswap_random_lam3_m0.2_transformer_p40_seed0
+   objswap_random_lam3_m0.2_transformer_p40_seed1
+   objswap_random_lam3_m0.2_transformer_p40_seed2
+max caption tokens: 40  train captions: 566747  val captions: 25010
+train random: 89.9% of captions have a negative
+objswap_random_lam3_m0.2_transformer_p40_seed0: already done
+objswap_random_lam3_m0.2_transformer_p40_seed1: training (339 min left in this job)
+resuming /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/runs/objswap_random_lam3_m0.2_transformer_p40_seed1 at epoch 8 step 12130
+epoch 8: epoch=8, train_loss=1.9989, session_seconds=280.6147, session_steps=2038, session_sec_per_step=0.1377, val_loss=2.3020
+epoch 9: epoch=9, train_loss=1.9655, session_seconds=1944.1593, session_steps=14168, session_sec_per_step=0.1372, val_loss=2.3117
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+evaluating clipcap_objswap_random_lam3_m0.2_transformer_p40_seed1_val on val
+  coverage ok: 5000 images
+  tokenising...
+  BLEU...
+  METEOR...
+  CIDEr...
+  CHAIR...
+  saved clipcap_objswap_random_lam3_m0.2_transformer_p40_seed1_val.eval.json and clipcap_objswap_random_lam3_m0.2_transformer_p40_seed1_val.per_image.json
+----------------------------------------
+file : clipcap_objswap_random_lam3_m0.2_transformer_p40_seed1_val
+split: val  images: 5000
+----------------------------------------
+BLEU-4          0.3097
+METEOR          0.2645
+CIDEr           1.0368
+CHAIRi          0.0761
+CHAIRs          0.1146
+avg_len         9.8122
+obj_recall      0.5560
+----------------------------------------
+  val gap (neg - pos NLL): structured 1.208, random 1.388
+  train hours: 5.41
+objswap_random_lam3_m0.2_transformer_p40_seed2: training (297 min left in this job)
+epoch 0: epoch=0, train_loss=2.7305, session_seconds=1948.8793, session_steps=14168, session_sec_per_step=0.1376, val_loss=2.4565
+epoch 1: epoch=1, train_loss=2.3915, session_seconds=1942.4982, session_steps=14168, session_sec_per_step=0.1371, val_loss=2.3695
+epoch 2: epoch=2, train_loss=2.3031, session_seconds=1940.5344, session_steps=14168, session_sec_per_step=0.1370, val_loss=2.3221
+epoch 3: epoch=3, train_loss=2.2398, session_seconds=1941.1184, session_steps=14168, session_sec_per_step=0.1370, val_loss=2.2935
+epoch 4: epoch=4, train_loss=2.1854, session_seconds=1941.1910, session_steps=14168, session_sec_per_step=0.1370, val_loss=2.2875
+epoch 5: epoch=5, train_loss=2.1351, session_seconds=1948.5321, session_steps=14168, session_sec_per_step=0.1375, val_loss=2.2824
+epoch 6: epoch=6, train_loss=2.0875, session_seconds=1942.6251, session_steps=14168, session_sec_per_step=0.1371, val_loss=2.2823
+epoch 7: epoch=7, train_loss=2.0423, session_seconds=1943.1918, session_steps=14168, session_sec_per_step=0.1372, val_loss=2.2892
+time limit reached: saved checkpoint at epoch 8 step 4416
+objswap_random_lam3_m0.2_transformer_p40_seed2: stopped at the time limit, checkpoint saved - submit the job again
+Time limit reached, checkpoint saved. Submitting the next job...
+Could not resubmit automatically. Run: sbatch /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/job_phase2_updated.sh ablation 
