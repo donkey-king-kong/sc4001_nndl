@@ -1,0 +1,1 @@
+{"caption_file": "clipcap_objswap_structured_ul_lam3_transformer_p40_seed0_test", "split": "test", "n_images": 5000, "spice": false, "scores": {"BLEU-4": 0.3117883089253622, "METEOR": 0.26466640334145514, "CIDEr": 1.05259041370767, "CHAIRi": 0.0682902949455391, "CHAIRs": 0.1032, "avg_len": 9.7928, "obj_recall": 0.558462232687116, "n_mentions": 8171, "n_hallucinated": 558}}

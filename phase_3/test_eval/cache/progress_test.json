@@ -1,0 +1,170 @@
+{
+ "objswap_structured_lam0_m0.2_transformer_p40_seed0": {
+  "scores": {
+   "BLEU-4": 0.3093712278867057,
+   "METEOR": 0.2640173902674423,
+   "CIDEr": 1.047233012703337,
+   "CHAIRi": 0.07121879588839941,
+   "CHAIRs": 0.1064,
+   "avg_len": 9.787,
+   "obj_recall": 0.56084266716439,
+   "n_mentions": 8172,
+   "n_hallucinated": 582
+  },
+  "minutes": 7.7
+ },
+ "objswap_structured_lam0_m0.2_transformer_p40_seed1": {
+  "scores": {
+   "BLEU-4": 0.3114258260925807,
+   "METEOR": 0.2655465878857837,
+   "CIDEr": 1.0520503437781334,
+   "CHAIRi": 0.06366307541625857,
+   "CHAIRs": 0.0954,
+   "avg_len": 9.8156,
+   "obj_recall": 0.5613547699867397,
+   "n_mentions": 8168,
+   "n_hallucinated": 520
+  },
+  "minutes": 8.9
+ },
+ "objswap_structured_lam0_m0.2_transformer_p40_seed2": {
+  "scores": {
+   "BLEU-4": 0.30566482178827636,
+   "METEOR": 0.2640678674538366,
+   "CIDEr": 1.0425440816112657,
+   "CHAIRi": 0.06919779546846296,
+   "CHAIRs": 0.1048,
+   "avg_len": 9.8348,
+   "obj_recall": 0.558303118933277,
+   "n_mentions": 8165,
+   "n_hallucinated": 565
+  },
+  "minutes": 8.0
+ },
+ "objswap_structured_lam3_m0.2_transformer_p40_seed0": {
+  "scores": {
+   "BLEU-4": 0.30346350813882256,
+   "METEOR": 0.2635653284819334,
+   "CIDEr": 1.0395129162901215,
+   "CHAIRi": 0.07153284671532846,
+   "CHAIRs": 0.107,
+   "avg_len": 9.8364,
+   "obj_recall": 0.5605014395934454,
+   "n_mentions": 8220,
+   "n_hallucinated": 588
+  },
+  "minutes": 8.3
+ },
+ "objswap_structured_lam3_m0.2_transformer_p40_seed1": {
+  "scores": {
+   "BLEU-4": 0.3122060546762708,
+   "METEOR": 0.26523185251565334,
+   "CIDEr": 1.0566429563835222,
+   "CHAIRi": 0.06712480058902932,
+   "CHAIRs": 0.0996,
+   "avg_len": 9.7998,
+   "obj_recall": 0.5601068266006861,
+   "n_mentions": 8149,
+   "n_hallucinated": 547
+  },
+  "minutes": 8.2
+ },
+ "objswap_structured_lam3_m0.2_transformer_p40_seed2": {
+  "scores": {
+   "BLEU-4": 0.3049306470743883,
+   "METEOR": 0.2628276508604209,
+   "CIDEr": 1.0394306014984855,
+   "CHAIRi": 0.06681432262827612,
+   "CHAIRs": 0.1004,
+   "avg_len": 9.8654,
+   "obj_recall": 0.555711557976506,
+   "n_mentions": 8127,
+   "n_hallucinated": 543
+  },
+  "minutes": 8.7
+ },
+ "objswap_random_lam3_m0.2_transformer_p40_seed0": {
+  "scores": {
+   "BLEU-4": 0.3029860035350906,
+   "METEOR": 0.2630559679066988,
+   "CIDEr": 1.0362294902864657,
+   "CHAIRi": 0.0646900269541779,
+   "CHAIRs": 0.0988,
+   "avg_len": 9.7974,
+   "obj_recall": 0.5580012755068117,
+   "n_mentions": 8162,
+   "n_hallucinated": 528
+  },
+  "minutes": 8.7
+ },
+ "objswap_random_lam3_m0.2_transformer_p40_seed1": {
+  "scores": {
+   "BLEU-4": 0.3096255635176637,
+   "METEOR": 0.2653875137611625,
+   "CIDEr": 1.0547783212717146,
+   "CHAIRi": 0.06933725346073748,
+   "CHAIRs": 0.1048,
+   "avg_len": 9.7736,
+   "obj_recall": 0.560673295342109,
+   "n_mentions": 8163,
+   "n_hallucinated": 566
+  },
+  "minutes": 8.2
+ },
+ "objswap_random_lam3_m0.2_transformer_p40_seed2": {
+  "scores": {
+   "BLEU-4": 0.3145869926951695,
+   "METEOR": 0.26668780545057474,
+   "CIDEr": 1.0615567050175265,
+   "CHAIRi": 0.0644447177468946,
+   "CHAIRs": 0.0966,
+   "avg_len": 9.7984,
+   "obj_recall": 0.5572079493108276,
+   "n_mentions": 8131,
+   "n_hallucinated": 524
+  },
+  "minutes": 8.0
+ },
+ "objswap_structured_ul_lam3_transformer_p40_seed0": {
+  "scores": {
+   "BLEU-4": 0.3117883089253622,
+   "METEOR": 0.26466640334145514,
+   "CIDEr": 1.05259041370767,
+   "CHAIRi": 0.0682902949455391,
+   "CHAIRs": 0.1032,
+   "avg_len": 9.7928,
+   "obj_recall": 0.558462232687116,
+   "n_mentions": 8171,
+   "n_hallucinated": 558
+  },
+  "minutes": 8.5
+ },
+ "objswap_structured_ul_lam3_transformer_p40_seed1": {
+  "scores": {
+   "BLEU-4": 0.3101725582267446,
+   "METEOR": 0.2636664153616239,
+   "CIDEr": 1.0526794910746575,
+   "CHAIRi": 0.06865269094029668,
+   "CHAIRs": 0.1044,
+   "avg_len": 9.7128,
+   "obj_recall": 0.5585154750848312,
+   "n_mentions": 8157,
+   "n_hallucinated": 560
+  },
+  "minutes": 8.5
+ },
+ "objswap_structured_ul_lam3_transformer_p40_seed2": {
+  "scores": {
+   "BLEU-4": 0.307190067636064,
+   "METEOR": 0.26248349234739177,
+   "CIDEr": 1.045269422810627,
+   "CHAIRi": 0.07056377644612939,
+   "CHAIRs": 0.105,
+   "avg_len": 9.8252,
+   "obj_recall": 0.5587910238655144,
+   "n_mentions": 8177,
+   "n_hallucinated": 577
+  },
+  "minutes": 8.6
+ }
+}

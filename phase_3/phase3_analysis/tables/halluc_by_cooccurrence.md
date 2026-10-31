@@ -1,0 +1,22 @@
+| condition | bin | rate | mentions_per_seed |
+|---|---|---|---|
+| baseline (lam 0) | 0-0.05 | 4.28 ± 0.43 | 1921 |
+| baseline (lam 0) | 0.05-0.1 | 9.24 ± 0.74 | 1031 |
+| baseline (lam 0) | 0.1-0.2 | 10.08 ± 0.81 | 1034 |
+| baseline (lam 0) | 0.2-0.4 | 14.05 ± 0.73 | 776 |
+| baseline (lam 0) | 0.4-1 | 4.84 ± 0.35 | 3406 |
+| structured lam 3 | 0-0.05 | 4.72 ± 0.38 | 1906 |
+| structured lam 3 | 0.05-0.1 | 8.54 ± 0.54 | 1018 |
+| structured lam 3 | 0.1-0.2 | 10.50 ± 0.82 | 1030 |
+| structured lam 3 | 0.2-0.4 | 13.10 ± 0.46 | 768 |
+| structured lam 3 | 0.4-1 | 5.03 ± 0.21 | 3444 |
+| random lam 3 | 0-0.05 | 4.08 ± 0.23 | 1903 |
+| random lam 3 | 0.05-0.1 | 7.84 ± 0.15 | 1016 |
+| random lam 3 | 0.1-0.2 | 9.81 ± 0.62 | 1026 |
+| random lam 3 | 0.2-0.4 | 15.11 ± 1.05 | 782 |
+| random lam 3 | 0.4-1 | 4.76 ± 0.28 | 3425 |
+| UL structured lam 3 | 0-0.05 | 4.85 ± 0.23 | 1922 |
+| UL structured lam 3 | 0.05-0.1 | 8.49 ± 0.50 | 1012 |
+| UL structured lam 3 | 0.1-0.2 | 9.69 ± 0.61 | 1035 |
+| UL structured lam 3 | 0.2-0.4 | 13.58 ± 0.16 | 744 |
+| UL structured lam 3 | 0.4-1 | 5.34 ± 0.21 | 3455 |
