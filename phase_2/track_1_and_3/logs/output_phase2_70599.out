@@ -7,3 +7,16 @@ ablation: 3 runs, worker 0 of 1 takes 3
 max caption tokens: 40  train captions: 566747  val captions: 25010
 train random: 89.9% of captions have a negative
 objswap_random_lam3_m0.2_transformer_p40_seed0: training (339 min left in this job)
+epoch 0: epoch=0, train_loss=2.7452, session_seconds=1978.7643, session_steps=14168, session_sec_per_step=0.1397, val_loss=2.4562
+epoch 1: epoch=1, train_loss=2.3963, session_seconds=1955.1821, session_steps=14168, session_sec_per_step=0.1380, val_loss=2.3667
+epoch 2: epoch=2, train_loss=2.3081, session_seconds=1957.5334, session_steps=14168, session_sec_per_step=0.1382, val_loss=2.3237
+epoch 3: epoch=3, train_loss=2.2446, session_seconds=1953.2307, session_steps=14168, session_sec_per_step=0.1379, val_loss=2.3034
+epoch 4: epoch=4, train_loss=2.1904, session_seconds=1966.1008, session_steps=14168, session_sec_per_step=0.1388, val_loss=2.2894
+epoch 5: epoch=5, train_loss=2.1406, session_seconds=1993.7618, session_steps=14168, session_sec_per_step=0.1407, val_loss=2.2808
+epoch 6: epoch=6, train_loss=2.0932, session_seconds=1954.6904, session_steps=14168, session_sec_per_step=0.1380, val_loss=2.2860
+epoch 7: epoch=7, train_loss=2.0483, session_seconds=1955.8697, session_steps=14168, session_sec_per_step=0.1380, val_loss=2.2957
+epoch 8: epoch=8, train_loss=2.0071, session_seconds=1953.3005, session_steps=14168, session_sec_per_step=0.1379, val_loss=2.3045
+time limit reached: saved checkpoint at epoch 9 step 6941
+objswap_random_lam3_m0.2_transformer_p40_seed0: stopped at the time limit, checkpoint saved - submit the job again
+Time limit reached, checkpoint saved. Submitting the next job...
+Could not resubmit automatically. Run: sbatch /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/job_phase2_updated.sh ablation 
