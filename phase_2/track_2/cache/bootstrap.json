@@ -1,0 +1,210 @@
+{
+ "structured lam 0.1 vs baseline (lam 0)": {
+  "model": "structured lam 0.1",
+  "reference": "baseline (lam 0)",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.522644089144351,
+   "model": 7.459662159074725,
+   "diff": -0.06298193006962632,
+   "ci_lo": -0.41006536269092037,
+   "ci_hi": 0.27586680031516203,
+   "p": 0.721
+  },
+  "CHAIRs": {
+   "reference": 11.159999999999998,
+   "model": 11.106666666666666,
+   "diff": -0.05333333333333301,
+   "ci_lo": -0.5866666666666673,
+   "ci_hi": 0.4666666666666666,
+   "p": 0.844
+  }
+ },
+ "structured lam 0.3 vs baseline (lam 0)": {
+  "model": "structured lam 0.3",
+  "reference": "baseline (lam 0)",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.522644089144351,
+   "model": 7.316932753177132,
+   "diff": -0.2057113359672194,
+   "ci_lo": -0.54909690990695,
+   "ci_hi": 0.13123098970174843,
+   "p": 0.23
+  },
+  "CHAIRs": {
+   "reference": 11.159999999999998,
+   "model": 10.986666666666666,
+   "diff": -0.17333333333333228,
+   "ci_lo": -0.7068333333333359,
+   "ci_hi": 0.31999999999999945,
+   "p": 0.506
+  }
+ },
+ "structured lam 1 vs baseline (lam 0)": {
+  "model": "structured lam 1",
+  "reference": "baseline (lam 0)",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.522644089144351,
+   "model": 7.252457575797484,
+   "diff": -0.27018651334686644,
+   "ci_lo": -0.6186939521928062,
+   "ci_hi": 0.058797507619720385,
+   "p": 0.106
+  },
+  "CHAIRs": {
+   "reference": 11.159999999999998,
+   "model": 10.860000000000001,
+   "diff": -0.2999999999999975,
+   "ci_lo": -0.8201666666666678,
+   "ci_hi": 0.20666666666666617,
+   "p": 0.26
+  }
+ },
+ "structured lam 3 vs baseline (lam 0)": {
+  "model": "structured lam 3",
+  "reference": "baseline (lam 0)",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.522644089144351,
+   "model": 7.212169931386652,
+   "diff": -0.31047415775769943,
+   "ci_lo": -0.652519364663929,
+   "ci_hi": 0.03187349042347775,
+   "p": 0.067
+  },
+  "CHAIRs": {
+   "reference": 11.159999999999998,
+   "model": 10.8,
+   "diff": -0.3599999999999992,
+   "ci_lo": -0.8666666666666669,
+   "ci_hi": 0.13333333333333391,
+   "p": 0.159
+  }
+ },
+ "random lam 3 vs baseline (lam 0)": {
+  "model": "random lam 3",
+  "reference": "baseline (lam 0)",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.522644089144351,
+   "model": 7.3833238956387035,
+   "diff": -0.13932019350564734,
+   "ci_lo": -0.5109917885947834,
+   "ci_hi": 0.22104652135121844,
+   "p": 0.433
+  },
+  "CHAIRs": {
+   "reference": 11.159999999999998,
+   "model": 11.126666666666667,
+   "diff": -0.03333333333333244,
+   "ci_lo": -0.626666666666667,
+   "ci_hi": 0.49333333333333174,
+   "p": 0.885
+  }
+ },
+ "UL structured lam 3 vs baseline (lam 0)": {
+  "model": "UL structured lam 3",
+  "reference": "baseline (lam 0)",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.522644089144351,
+   "model": 7.095793259127616,
+   "diff": -0.42685083001673535,
+   "ci_lo": -0.7646198375232496,
+   "ci_hi": -0.0831808289146501,
+   "p": 0.018
+  },
+  "CHAIRs": {
+   "reference": 11.159999999999998,
+   "model": 10.68,
+   "diff": -0.4799999999999985,
+   "ci_lo": -1.0066666666666668,
+   "ci_hi": 0.05999999999999898,
+   "p": 0.077
+  }
+ },
+ "random lam 3 vs structured lam 3": {
+  "model": "random lam 3",
+  "reference": "structured lam 3",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.212169931386652,
+   "model": 7.3833238956387035,
+   "diff": 0.1711539642520521,
+   "ci_lo": -0.2065407135764772,
+   "ci_hi": 0.5214516513846819,
+   "p": 0.353
+  },
+  "CHAIRs": {
+   "reference": 10.8,
+   "model": 11.126666666666667,
+   "diff": 0.32666666666666677,
+   "ci_lo": -0.2466666666666645,
+   "ci_hi": 0.8534999999999994,
+   "p": 0.231
+  }
+ },
+ "UL structured lam 3 vs structured lam 3": {
+  "model": "UL structured lam 3",
+  "reference": "structured lam 3",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_boot": 2000,
+  "CHAIRi": {
+   "reference": 7.212169931386652,
+   "model": 7.095793259127616,
+   "diff": -0.11637667225903592,
+   "ci_lo": -0.4512702779794463,
+   "ci_hi": 0.2304219352833714,
+   "p": 0.506
+  },
+  "CHAIRs": {
+   "reference": 10.8,
+   "model": 10.68,
+   "diff": -0.11999999999999927,
+   "ci_lo": -0.6533333333333335,
+   "ci_hi": 0.4133333333333323,
+   "p": 0.669
+  }
+ }
+}

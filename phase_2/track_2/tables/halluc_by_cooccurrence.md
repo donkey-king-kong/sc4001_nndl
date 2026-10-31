@@ -1,0 +1,42 @@
+| condition | bin | rate | mentions_per_seed |
+|---|---|---|---|
+| phase 1 baseline | 0-0.05 | 4.53 ± 0.25 | 1948 |
+| phase 1 baseline | 0.05-0.1 | 9.85 ± 1.07 | 1038 |
+| phase 1 baseline | 0.1-0.2 | 11.29 ± 0.61 | 974 |
+| phase 1 baseline | 0.2-0.4 | 14.25 ± 1.21 | 752 |
+| phase 1 baseline | 0.4-1 | 5.23 ± 0.41 | 3435 |
+| baseline (lam 0) | 0-0.05 | 5.10 ± 0.26 | 1949 |
+| baseline (lam 0) | 0.05-0.1 | 9.40 ± 0.62 | 1032 |
+| baseline (lam 0) | 0.1-0.2 | 12.33 ± 0.65 | 989 |
+| baseline (lam 0) | 0.2-0.4 | 14.79 ± 0.09 | 762 |
+| baseline (lam 0) | 0.4-1 | 5.35 ± 0.49 | 3461 |
+| structured lam 0.1 | 0-0.05 | 4.93 ± 0.21 | 1961 |
+| structured lam 0.1 | 0.05-0.1 | 9.73 ± 0.72 | 1034 |
+| structured lam 0.1 | 0.1-0.2 | 11.72 ± 0.94 | 978 |
+| structured lam 0.1 | 0.2-0.4 | 15.15 ± 1.42 | 761 |
+| structured lam 0.1 | 0.4-1 | 5.31 ± 0.34 | 3452 |
+| structured lam 0.3 | 0-0.05 | 4.69 ± 0.49 | 1961 |
+| structured lam 0.3 | 0.05-0.1 | 8.64 ± 0.83 | 1026 |
+| structured lam 0.3 | 0.1-0.2 | 12.23 ± 0.45 | 968 |
+| structured lam 0.3 | 0.2-0.4 | 15.27 ± 0.37 | 781 |
+| structured lam 0.3 | 0.4-1 | 5.23 ± 0.48 | 3445 |
+| structured lam 1 | 0-0.05 | 4.66 ± 0.47 | 1946 |
+| structured lam 1 | 0.05-0.1 | 9.08 ± 0.59 | 1038 |
+| structured lam 1 | 0.1-0.2 | 11.33 ± 1.06 | 979 |
+| structured lam 1 | 0.2-0.4 | 14.77 ± 0.78 | 761 |
+| structured lam 1 | 0.4-1 | 5.35 ± 0.27 | 3450 |
+| structured lam 3 | 0-0.05 | 4.46 ± 0.20 | 1942 |
+| structured lam 3 | 0.05-0.1 | 9.39 ± 0.35 | 1029 |
+| structured lam 3 | 0.1-0.2 | 11.15 ± 1.05 | 971 |
+| structured lam 3 | 0.2-0.4 | 15.12 ± 1.47 | 768 |
+| structured lam 3 | 0.4-1 | 5.24 ± 0.33 | 3460 |
+| random lam 3 | 0-0.05 | 4.65 ± 0.11 | 1948 |
+| random lam 3 | 0.05-0.1 | 9.02 ± 0.46 | 1038 |
+| random lam 3 | 0.1-0.2 | 11.33 ± 0.74 | 974 |
+| random lam 3 | 0.2-0.4 | 15.84 ± 1.01 | 782 |
+| random lam 3 | 0.4-1 | 5.41 ± 0.23 | 3475 |
+| UL structured lam 3 | 0-0.05 | 4.57 ± 0.21 | 1941 |
+| UL structured lam 3 | 0.05-0.1 | 9.69 ± 0.82 | 1045 |
+| UL structured lam 3 | 0.1-0.2 | 10.91 ± 0.30 | 969 |
+| UL structured lam 3 | 0.2-0.4 | 13.64 ± 1.28 | 749 |
+| UL structured lam 3 | 0.4-1 | 5.24 ± 0.23 | 3455 |

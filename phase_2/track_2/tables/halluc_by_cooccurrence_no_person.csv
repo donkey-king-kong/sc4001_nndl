@@ -1,0 +1,41 @@
+condition,bin,rate,mentions_per_seed
+phase 1 baseline,0-0.05,4.52 ± 0.27,1940
+phase 1 baseline,0.05-0.1,9.85 ± 1.07,1038
+phase 1 baseline,0.1-0.2,11.27 ± 0.59,970
+phase 1 baseline,0.2-0.4,14.93 ± 1.10,709
+phase 1 baseline,0.4-1,13.95 ± 0.96,1153
+baseline (lam 0),0-0.05,5.09 ± 0.26,1939
+baseline (lam 0),0.05-0.1,9.40 ± 0.62,1032
+baseline (lam 0),0.1-0.2,12.30 ± 0.61,986
+baseline (lam 0),0.2-0.4,15.53 ± 0.18,719
+baseline (lam 0),0.4-1,14.17 ± 0.93,1163
+structured lam 0.1,0-0.05,4.95 ± 0.21,1952
+structured lam 0.1,0.05-0.1,9.73 ± 0.72,1034
+structured lam 0.1,0.1-0.2,11.62 ± 0.82,974
+structured lam 0.1,0.2-0.4,15.87 ± 1.46,720
+structured lam 0.1,0.4-1,13.75 ± 0.63,1163
+structured lam 0.3,0-0.05,4.68 ± 0.48,1950
+structured lam 0.3,0.05-0.1,8.64 ± 0.83,1026
+structured lam 0.3,0.1-0.2,12.19 ± 0.44,965
+structured lam 0.3,0.2-0.4,16.12 ± 0.38,740
+structured lam 0.3,0.4-1,13.47 ± 1.45,1166
+structured lam 1,0-0.05,4.64 ± 0.45,1938
+structured lam 1,0.05-0.1,9.08 ± 0.59,1038
+structured lam 1,0.1-0.2,11.29 ± 1.07,976
+structured lam 1,0.2-0.4,15.54 ± 0.80,718
+structured lam 1,0.4-1,13.74 ± 1.00,1160
+structured lam 3,0-0.05,4.47 ± 0.18,1933
+structured lam 3,0.05-0.1,9.39 ± 0.35,1029
+structured lam 3,0.1-0.2,11.08 ± 1.00,968
+structured lam 3,0.2-0.4,15.92 ± 1.56,727
+structured lam 3,0.4-1,13.48 ± 0.85,1187
+random lam 3,0-0.05,4.65 ± 0.09,1941
+random lam 3,0.05-0.1,9.02 ± 0.46,1038
+random lam 3,0.1-0.2,11.31 ± 0.79,970
+random lam 3,0.2-0.4,16.65 ± 0.99,740
+random lam 3,0.4-1,14.31 ± 0.61,1185
+UL structured lam 3,0-0.05,4.59 ± 0.22,1933
+UL structured lam 3,0.05-0.1,9.69 ± 0.82,1045
+UL structured lam 3,0.1-0.2,10.80 ± 0.38,966
+UL structured lam 3,0.2-0.4,14.32 ± 1.28,705
+UL structured lam 3,0.4-1,13.76 ± 0.68,1164
