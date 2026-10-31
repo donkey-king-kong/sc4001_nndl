@@ -17,6 +17,6 @@ objswap_structured_lam3_m0.2_transformer_p40_seed2,0,3.0,structured,margin,0.2,2
 objswap_random_lam3_m0.2_transformer_p40_seed0,0,3.0,random,margin,0.2,0,scored,5.41,Tesla V100-PCIE-32GB,2.3134,30.88,26.39,103.46,7.18,10.76,9.81,55.12,1.2091,0.9892,0.091 -> 0.000
 objswap_random_lam3_m0.2_transformer_p40_seed1,0,3.0,random,margin,0.2,1,scored,5.41,Tesla V100-PCIE-32GB,2.3117,30.97,26.45,103.68,7.61,11.46,9.81,55.6,1.2084,0.9904,0.089 -> 0.000
 objswap_random_lam3_m0.2_transformer_p40_seed2,0,3.0,random,margin,0.2,2,scored,5.35,Tesla V100-PCIE-32GB,2.3113,30.71,26.42,104.16,7.36,11.16,9.81,55.33,1.2176,0.9904,0.084 -> 0.000
-objswap_structured_ul_lam3_transformer_p40_seed0,0,3.0,structured,unlikelihood,0.2,0,not started,,,,,,,,,,,,,
-objswap_structured_ul_lam3_transformer_p40_seed1,0,3.0,structured,unlikelihood,0.2,1,not started,,,,,,,,,,,,,
-objswap_structured_ul_lam3_transformer_p40_seed2,0,3.0,structured,unlikelihood,0.2,2,not started,,,,,,,,,,,,,
+objswap_structured_ul_lam3_transformer_p40_seed0,0,3.0,structured,unlikelihood,0.2,0,scored,5.45,Tesla V100-PCIE-32GB,2.3178,30.92,26.56,104.45,6.73,10.2,9.81,55.04,1.3376,0.9927,0.025 -> 0.002
+objswap_structured_ul_lam3_transformer_p40_seed1,0,3.0,structured,unlikelihood,0.2,1,scored,5.49,Tesla V100-PCIE-32GB,2.3185,31.02,26.45,104.27,7.27,11.12,9.73,55.42,1.3291,0.9917,0.021 -> 0.002
+objswap_structured_ul_lam3_transformer_p40_seed2,0,3.0,structured,unlikelihood,0.2,2,scored,5.47,Tesla V100-PCIE-32GB,2.3168,30.99,26.44,104.08,7.28,10.72,9.8,55.05,1.3386,0.9915,0.024 -> 0.002

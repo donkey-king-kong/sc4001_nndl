@@ -1,0 +1,150 @@
+=== stage summary (340 min left in this job) ===
+stage: summary | output: /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out | time limit: 340 min
+categories: 80 object words: 403
+helpers ready
+index loaded: 123287 images
+evaluation helpers ready
+
+=== lambda=0 swap=structured loss=margin ===
+seed 0 chair_i: baseline 7.19  track3 7.49  diff +0.29 [-0.30, +0.87]
+seed 0 chair_s: baseline 10.88  track3 11.00  diff +0.12 [-0.80, +1.00]
+seed 1 chair_i: baseline 6.99  track3 7.95  diff +0.96 [+0.39, +1.58]  *
+seed 1 chair_s: baseline 10.58  track3 11.90  diff +1.32 [+0.46, +2.24]  *
+seed 2 chair_i: baseline 7.46  track3 7.13  diff -0.33 [-0.91, +0.25]
+seed 2 chair_s: baseline 11.20  track3 10.58  diff -0.62 [-1.52, +0.22]
+  BLEU-4        30.96 +- 0.10
+  METEOR        26.53 +- 0.02
+  CIDEr        104.28 +- 0.15
+  CHAIRi         7.52 +- 0.33
+  CHAIRs        11.16 +- 0.55
+  avg_len        9.81 +- 0.02
+  obj_recall    55.23 +- 0.18
+  seed 0 val gap: structured 1.199, random 1.375
+  seed 1 val gap: structured 1.190, random 1.360
+  seed 2 val gap: structured 1.203, random 1.380
+
+=== lambda=0.1 swap=structured loss=margin ===
+seed 0 chair_i: baseline 7.19  track3 7.60  diff +0.41 [-0.19, +0.99]
+seed 0 chair_s: baseline 10.88  track3 11.20  diff +0.32 [-0.60, +1.16]
+seed 1 chair_i: baseline 6.99  track3 7.72  diff +0.74 [+0.19, +1.33]  *
+seed 1 chair_s: baseline 10.58  track3 11.68  diff +1.10 [+0.18, +2.02]  *
+seed 2 chair_i: baseline 7.46  track3 7.05  diff -0.41 [-1.03, +0.19]
+seed 2 chair_s: baseline 11.20  track3 10.44  diff -0.76 [-1.62, +0.12]
+  BLEU-4        30.75 +- 0.27
+  METEOR        26.39 +- 0.04
+  CIDEr        103.74 +- 0.19
+  CHAIRi         7.46 +- 0.29
+  CHAIRs        11.11 +- 0.51
+  avg_len        9.82 +- 0.02
+  obj_recall    55.09 +- 0.12
+  seed 0 train: ranking_loss 0.098 -> 0.005, gap 0.306 -> 1.088
+  seed 0 val gap: structured 1.208, random 1.378
+  seed 1 train: ranking_loss 0.103 -> 0.002, gap 0.283 -> 1.280
+  seed 1 val gap: structured 1.190, random 1.358
+  seed 2 train: ranking_loss 0.093 -> 0.002, gap 0.326 -> 1.297
+  seed 2 val gap: structured 1.208, random 1.382
+
+=== lambda=0.3 swap=structured loss=margin ===
+seed 0 chair_i: baseline 7.19  track3 7.07  diff -0.13 [-0.66, +0.46]
+seed 0 chair_s: baseline 10.88  track3 10.50  diff -0.38 [-1.24, +0.46]
+seed 1 chair_i: baseline 6.99  track3 7.79  diff +0.81 [+0.26, +1.39]  *
+seed 1 chair_s: baseline 10.58  track3 11.76  diff +1.18 [+0.28, +2.12]  *
+seed 2 chair_i: baseline 7.46  track3 7.09  diff -0.37 [-0.99, +0.27]
+seed 2 chair_s: baseline 11.20  track3 10.70  diff -0.50 [-1.46, +0.38]
+  BLEU-4        30.94 +- 0.14
+  METEOR        26.51 +- 0.01
+  CIDEr        104.11 +- 0.07
+  CHAIRi         7.32 +- 0.34
+  CHAIRs        10.99 +- 0.55
+  avg_len        9.85 +- 0.00
+  obj_recall    55.30 +- 0.17
+  seed 0 val gap: structured 1.210, random 1.375
+  seed 1 train: ranking_loss 0.102 -> 0.001, gap 0.284 -> 1.294
+  seed 1 val gap: structured 1.204, random 1.367
+  seed 2 train: ranking_loss 0.093 -> 0.001, gap 0.325 -> 1.304
+  seed 2 val gap: structured 1.212, random 1.386
+
+=== lambda=1 swap=structured loss=margin ===
+seed 0 chair_i: baseline 7.19  track3 6.92  diff -0.27 [-0.85, +0.31]
+seed 0 chair_s: baseline 10.88  track3 10.36  diff -0.52 [-1.40, +0.38]
+seed 1 chair_i: baseline 6.99  track3 7.58  diff +0.59 [+0.01, +1.24]  *
+seed 1 chair_s: baseline 10.58  track3 11.30  diff +0.72 [-0.14, +1.70]
+seed 2 chair_i: baseline 7.46  track3 7.26  diff -0.20 [-0.82, +0.36]
+seed 2 chair_s: baseline 11.20  track3 10.92  diff -0.28 [-1.20, +0.58]
+  BLEU-4        30.81 +- 0.21
+  METEOR        26.38 +- 0.05
+  CIDEr        103.72 +- 0.32
+  CHAIRi         7.25 +- 0.27
+  CHAIRs        10.86 +- 0.39
+  avg_len        9.77 +- 0.02
+  obj_recall    55.30 +- 0.19
+  seed 0 val gap: structured 1.230, random 1.387
+  seed 1 train: ranking_loss 0.103 -> 0.001, gap 0.276 -> 1.306
+  seed 1 val gap: structured 1.217, random 1.372
+  seed 2 train: ranking_loss 0.093 -> 0.000, gap 0.325 -> 1.324
+  seed 2 val gap: structured 1.229, random 1.391
+
+=== lambda=3 swap=structured loss=margin ===
+seed 0 chair_i: baseline 7.19  track3 7.14  diff -0.05 [-0.66, +0.54]
+seed 0 chair_s: baseline 10.88  track3 10.68  diff -0.20 [-1.14, +0.70]
+seed 1 chair_i: baseline 6.99  track3 7.21  diff +0.23 [-0.35, +0.84]
+seed 1 chair_s: baseline 10.58  track3 10.86  diff +0.28 [-0.60, +1.20]
+seed 2 chair_i: baseline 7.46  track3 7.28  diff -0.18 [-0.81, +0.44]
+seed 2 chair_s: baseline 11.20  track3 10.86  diff -0.34 [-1.28, +0.58]
+  BLEU-4        30.83 +- 0.09
+  METEOR        26.44 +- 0.13
+  CIDEr        104.22 +- 0.25
+  CHAIRi         7.21 +- 0.06
+  CHAIRs        10.80 +- 0.08
+  avg_len        9.82 +- 0.02
+  obj_recall    55.28 +- 0.11
+  seed 0 val gap: structured 1.231, random 1.383
+  seed 1 train: ranking_loss 0.107 -> 0.000, gap 0.258 -> 1.308
+  seed 1 val gap: structured 1.224, random 1.381
+  seed 2 train: ranking_loss 0.096 -> 0.000, gap 0.305 -> 1.318
+  seed 2 val gap: structured 1.229, random 1.388
+
+=== lambda=3 swap=random loss=margin ===
+seed 0 chair_i: baseline 7.19  track3 7.18  diff -0.02 [-0.65, +0.60]
+seed 0 chair_s: baseline 10.88  track3 10.76  diff -0.12 [-1.06, +0.82]
+seed 1 chair_i: baseline 6.99  track3 7.61  diff +0.63 [+0.01, +1.21]  *
+seed 1 chair_s: baseline 10.58  track3 11.46  diff +0.88 [+0.02, +1.80]  *
+seed 2 chair_i: baseline 7.46  track3 7.36  diff -0.10 [-0.69, +0.53]
+seed 2 chair_s: baseline 11.20  track3 11.16  diff -0.04 [-1.00, +0.84]
+  BLEU-4        30.85 +- 0.11
+  METEOR        26.42 +- 0.03
+  CIDEr        103.77 +- 0.29
+  CHAIRi         7.38 +- 0.18
+  CHAIRs        11.13 +- 0.29
+  avg_len        9.81 +- 0.00
+  obj_recall    55.35 +- 0.20
+  seed 0 train: ranking_loss 0.091 -> 0.000, gap 0.323 -> 1.472
+  seed 0 val gap: structured 1.209, random 1.393
+  seed 1 train: ranking_loss 0.089 -> 0.000, gap 0.325 -> 1.474
+  seed 1 val gap: structured 1.208, random 1.388
+  seed 2 train: ranking_loss 0.084 -> 0.000, gap 0.359 -> 1.486
+  seed 2 val gap: structured 1.218, random 1.400
+
+=== lambda=3 swap=structured loss=unlikelihood ===
+seed 0 chair_i: baseline 7.19  track3 6.73  diff -0.46 [-1.04, +0.13]
+seed 0 chair_s: baseline 10.88  track3 10.20  diff -0.68 [-1.56, +0.22]
+seed 1 chair_i: baseline 6.99  track3 7.27  diff +0.29 [-0.28, +0.85]
+seed 1 chair_s: baseline 10.58  track3 11.12  diff +0.54 [-0.34, +1.44]
+seed 2 chair_i: baseline 7.46  track3 7.28  diff -0.18 [-0.78, +0.41]
+seed 2 chair_s: baseline 11.20  track3 10.72  diff -0.48 [-1.40, +0.38]
+  BLEU-4        30.98 +- 0.04
+  METEOR        26.48 +- 0.05
+  CIDEr        104.27 +- 0.15
+  CHAIRi         7.10 +- 0.26
+  CHAIRs        10.68 +- 0.38
+  avg_len        9.78 +- 0.03
+  obj_recall    55.17 +- 0.18
+  seed 0 train: ranking_loss 0.025 -> 0.002, gap 0.291 -> 1.420
+  seed 0 val gap: structured 1.338, random 1.468
+  seed 1 train: ranking_loss 0.021 -> 0.002, gap 0.271 -> 1.415
+  seed 1 val gap: structured 1.329, random 1.461
+  seed 2 train: ranking_loss 0.024 -> 0.002, gap 0.308 -> 1.431
+  seed 2 val gap: structured 1.339, random 1.473
+
+saved /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results/phase2_summary.json
+Done: summary. Results are in /tc1home/UG/limj0279/sc4001_nndl/phase_2/track_1_and_3/out/results (run sheet: runs.csv)
