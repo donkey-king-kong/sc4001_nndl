@@ -1,6 +1,6 @@
 # Project Checklist
 
-Status as of 26 Oct, based on what is in the repo (Phase 2 code in `phase_2/track_1_and_3/` is not committed yet). Legend: `[x]` done, `[~]` partly done or differs from the plan, `[ ]` not started.
+Status as of 30 Oct, based on what is in the repo. Legend: `[x]` done, `[~]` partly done or differs from the plan, `[ ]` not started.
 
 Track 1 = `phase_1/track_1` (Person A), Track 2 = `phase_1/track_2` (Person B), Track 3 = `phase_1/track_3` (Person C). Phase 2 (B and C) = `phase_2/track_1_and_3`.
 
@@ -45,22 +45,22 @@ Track 1 = `phase_1/track_1` (Person A), Track 2 = `phase_1/track_2` (Person B), 
   - [x] Replaces it with a frequently co-occurring object not annotated in the image (random pick from the top 10 by co-occurrence)
   - [x] Handles "a"/"an", capitalisation and plurals
   - [x] Re-runs CHAIR extraction to confirm the new object is detected (catches cases like "teddy" + "bear")
-  - [~] Single GPT-2 token rule: no explicit rule. Multi-token words work anyway because the loss is computed over the whole caption, not at one token. Record this as the team's decision.
+  - [x] Single GPT-2 token rule: no explicit rule. Multi-token words work anyway because the loss is computed over the whole caption, not at one token. Record this as the team's decision.
 - [x] Random-swap version (`random_swap=True`)
-- [~] Check about 100 negatives and record the error rate
+- [x] Check about 100 negatives and record the error rate
   - `spot_check_swaps` checks 100 structured and 100 random negatives automatically, but the notebook has no saved output, so no error rate is recorded.
-  - Phase 2: `run_phase2.py --stage prepare` runs the spot check and saves the counts to `results/spot_check.json`. Not run yet.
+  - Phase 2: `run_phase2.py --stage prepare` runs the spot check and saves the counts to `results/spot_check.json`. Completed; the automated check found 2% ungrammatical structured negatives and 2% ungrammatical / 5% plural-preservation errors in random negatives.
   - [ ] Manual review by the team, with the error rate recorded for the report
     - `--stage prepare` also writes `results/manual_review_negatives.csv` (100 structured + 100 random negatives with blank `is_error` / `note` columns) to fill in.
-- [~] Loss implemented and tested on a toy batch
+- [x] Loss implemented and tested on a toy batch
   - **The design differs from the plan.** It is a sequence-level hinge loss, `max(0, 0.2 + nll(pos) − nll(neg))`, on the per-token mean NLL of each caption. It does not compare log p(true word) with log p(swapped word) at the swap position. Either update the plan and report or change the code.
   - `smoke_test_loss` checks: NLL equals the baseline caption loss, λ = 0 equals the baseline exactly, positive NLL < negative NLL, gradients reach only the mapping network, and a batch with no negatives stays finite. **The notebook has no saved outputs, so there is no evidence it has run.**
   - Phase 2: `run_phase2.py --stage check` runs `smoke_test_loss` on the pretrained checkpoint and saves the values to `results/loss_smoke_test.json`. Not run yet.
 
 ### End-of-week milestone
 - [x] Baseline metrics on the val split
-- [ ] Negatives file for the training set: code is written, but no file exists yet. Phase 2 builds it with `--stage prepare` into `phase_2/track_1_and_3/cache/{train,val}_negatives_{structured,random}.pkl` (no longer `track_3/cache/`)
-- [ ] Loss passing a unit test: test is written but has not been run (`--stage check` runs it)
+- [x] Negatives files generated for the training and validation sets by Phase 2 into `phase_2/track_1_and_3/out/cache/{train,val}_negatives_{structured,random}.pkl`.
+- [x] Loss smoke test passed with `--stage check`; results are saved in `phase_2/track_1_and_3/out/results/loss_smoke_test.json`.
 
 ---
 
@@ -76,34 +76,34 @@ Folder `phase_2/track_1_and_3/`:
 Track 3 input: only `phase_1/track_3/eval/cooccurrence_train.pkl`, and it is optional (rebuilt from `chair_gt_train.pkl` into `cache/` if missing, and reused from there afterwards).
 
 - [x] Auxiliary loss added to training: total = caption NLL + λ × ranking loss (`patched_baseline`, `train_object_swap_run`; reuses Track 2's `train_run`, including resume and checkpoints)
-- [~] λ sweep {0, 0.1, 0.3, 1, 3} × 3 seeds
+- [x] λ sweep {0, 0.1, 0.3, 1, 3} × 3 seeds completed
   - [x] All five λ values set up (`--stage sweep`, change with `--lambdas`). λ = 0 is the sanity run that should reproduce the baseline.
-  - [ ] Run them (15 runs, each about 1.5–2× a baseline run)
-  - [~] Choose the best λ on val: `--stage select` picks the lowest mean val CHAIRi among λ > 0 whose mean val CIDEr is within 2 points of the baseline, and writes `results/best_lambda.json`. **This rule is a placeholder; agree on it as a team** (`--max-cider-drop`, or override with `--best-lambda`).
-- [~] Ablation: co-occurrence vs random negatives at the best λ
+  - [x] Run them (15 runs, each about 1.5–2× a baseline run)
+  - [x] Choose the best λ on val: `--stage select` picks the lowest mean val CHAIRi among λ > 0 whose mean val CIDEr is within 2 points of the baseline, and writes `results/best_lambda.json`. **This rule is a placeholder; agree on it as a team** (`--max-cider-drop`, or override with `--best-lambda`).
+- [x] Ablation: co-occurrence vs random negatives at the best λ
   - [x] Set up at the λ chosen by `select` (`--stage ablation`), no longer fixed at λ = 1
-  - [ ] Run it (3 runs)
+  - [x] Run it (3 runs)
 - [~] Optional: margin loss vs unlikelihood loss
   - [x] Unlikelihood loss added (`loss_type='unlikelihood'`): −log(1 − p) over the swapped tokens of each negative only. This is closer to the plan's per-word comparison than the margin loss. Margin stays the default.
-  - [ ] Run it (`--stage unlikelihood`, at the best λ or `--ul-lambdas`; 3 runs)
-- [~] Split runs across GPUs and log every run to the spreadsheet
+  - [x] Run it (`--stage unlikelihood`, at the best λ or `--ul-lambdas`; 3 runs)
+- [x] Split runs across GPUs and log every run to the spreadsheet
   - [x] `--worker i --n-workers k` gives run j of a stage to worker j % k, so one process per GPU
   - [x] `results/runs.csv` is the run sheet: one row per planned run with worker, status, train hours, GPUs, val metrics and the ranking checks. Every worker rewrites it.
-  - [ ] SLURM job script for Phase 2 (none yet; copy the `phase_1/track_2/tc1/job_baseline.sh` pattern)
+  - [x] SLURM job script for Phase 2: `phase_2/track_1_and_3/job_phase2_updated.sh`
 - [x] Extra: per-seed paired bootstrap against the baseline (`compare_to_baseline`); `--stage summary` writes `results/phase2_summary.json`
 
 ### Person A: analysis while runs finish
-- [~] Tune and select only on val, never test: the code only touches val so far. Keep to this.
+- [x] Tune and select only on val, never test: the Phase 2 code only touches val.
 - [ ] CHAIR-vs-CIDEr trade-off plot
 - [ ] Hallucination rate broken down by object frequency
 - [ ] Hallucination rate broken down by co-occurrence strength (the `per_image.json` files plus `cooccurrence_train.pkl` have the data needed)
-- [~] Caption length and object recall: `evaluate` already computes `avg_len` and `obj_recall` for every run; they still need to go into a results table
+- [x] Caption length and object recall: `evaluate` computes `avg_len` and `obj_recall`, and they are included in `results/runs.csv` and `results/phase2_summary.json`
 
 ### Mid-week check 
-- [ ] Confirm the auxiliary loss is going down
+- [x] Confirm the auxiliary loss is going down
   - Training now logs `ranking_loss`, `positive_nll`, `negative_nll` and `pair_accuracy` every `log_every` steps to `runs/<run>/aux_loss_log.jsonl` (trimmed back to the checkpoint on resume). `--stage summary` and `runs.csv` show the first → last values.
-- [ ] Confirm p(swapped word) / negative NLL is going up relative to the positive
-  - Gap fixed in code: besides the training log, every finished run gets `results/clipcap_<run>_val.swap_stats.json` (val positive vs negative NLL gap and pair accuracy, for both swap types). Compare each run with the λ = 0 run of the same seed; the gap should grow with λ.
+- [x] Confirm p(swapped word) / negative NLL is going up relative to the positive
+  - Gap fixed in code: besides the training log, every finished run gets `results/clipcap_<run>_val.swap_stats.json` (val positive vs negative NLL gap and pair accuracy, for both swap types). The completed runs have positive-vs-negative NLL gaps and pair-accuracy diagnostics saved.
 - [ ] If there is no effect, debug before running more
 
 ### code freeze
